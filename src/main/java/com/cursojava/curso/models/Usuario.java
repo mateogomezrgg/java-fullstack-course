@@ -1,11 +1,20 @@
 package com.cursojava.curso.models;
 
 public class Usuario {
+    private Long id;
     private String nombre;
     private String apellido;
     private String email;
     private String password;
     private String telefono;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
