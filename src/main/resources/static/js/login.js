@@ -19,9 +19,11 @@ async function login(){
 
     const respuesta = await request.text();
 
-    if(respuesta != "OK"){
+    if(respuesta == "AUTH ERROR"){
         alert("Las credenciales ingresadas son incorrectas.");
     } else {
+        localStorage.token = respuesta;
+        localStorage.email = datos.email;
         window.location.href = "usuarios.html"
     }
 }
